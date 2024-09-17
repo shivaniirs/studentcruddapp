@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, sans-serif;
+}
+ 
+.container {
+  display: flex;
+  flex-direction: row;
+  margin: 20px;
+}
+ 
+
+.form-section {
+  width: 300px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-right: 20px;
+  transition: all 0.3s ease-in-out;
+}
+ 
+.form-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+ 
+.form-section h2 {
+  font-size: 20px;
+  color: #33333300;
+}
+ 
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #cccccc;
+  transition: border 0.3s ease;
+}
+ 
+input[type="text"]:focus {
+  border-color: #ff0084;
+  outline: none;
+}
+ 
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f200ff;
+  color: rgb(117, 0, 0);
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+ 
+button:hover {
+  background-color: #b30083ed;
+}
+ 
+
+.table-container {
+  flex-grow: 1;
+}
+ 
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: hsl(323, 100%, 72%);
+  border-radius: 8px;
+  animation: fadeIn 10s ease;
+}
+ 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+ 
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #fff8fc;
+  font-size: 14px;
+  animation: fadeInUp 0.9s ease;
+}
+ 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+ 
+th {
+  background-color: #ff3b9d;
+  color: rgb(249, 249, 249);
+  font-size: 16px;
+  padding: 10px;
+}
+ 
+td {
+  font-size: 14px;
+}
+ 
+
+td button {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+ 
+td button:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+}
+ 
+td .edit-btn {
+  background-color: #ff9800;
+  color: rgba(255, 161, 227, 0.648);
+}
+ 
+td .delete-btn {
+  background-color: #f436c1;
+  color: rgb(255, 93, 209);
+}
+ 
+
+table, th, td {
+  max-width: 100px;
+  min-width: 70px;
+  word-wrap: break-word;
+}
+ 
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+ 
+  table, th, td {
+    font-size: 12px;
+  }
+}
